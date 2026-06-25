@@ -11,21 +11,38 @@
 
 <header>
     <nav class="navbar">
-        <div class="logo">HIREHUB</div>
-        <div id="profile">
-            Welcome,
-            <span id="userName"></span>
+
+        <div class="logo">
+            HIRE<span>HUB</span>
         </div>
-        <button onclick="logoutUser()">
-            Logout
-        </button>
 
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="apply.html">Apply Job</a></li>
             <li><a href="register.html">Register</a></li>
-            <li><a href="login.html" class="login-btn">Login</a></li>
         </ul>
+
+        <div class="auth-buttons">
+
+            <div id="profile">
+                Welcome,
+                <span id="userName"></span>
+            </div>
+
+            <button class="logout-btn" onclick="logoutUser()">
+                Logout
+            </button>
+
+            <a href="login.html" class="login">
+                Login
+            </a>
+
+            <a href="register.html" class="signup">
+                Sign Up
+            </a>
+
+        </div>
+
     </nav>
 </header>
 

@@ -221,3 +221,159 @@ header button{
     margin:20px 0;
     font-weight:bold;
 }
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:white;
+}
+
+.logo{
+    font-size:50px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#10b981;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:40px;
+    margin:0;
+    padding:0;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:black;
+    font-size:24px;
+    font-weight:500;
+}
+
+.auth-buttons{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.login{
+    text-decoration:none;
+    border:2px solid #10b981;
+    padding:12px 28px;
+    border-radius:8px;
+    color:black;
+}
+
+.signup{
+    text-decoration:none;
+    background:#10b981;
+    color:white;
+    padding:12px 28px;
+    border-radius:8px;
+}
+
+#profile{
+    color:#10b981;
+    font-weight:bold;
+    margin-right:20px;
+}
+
+.logout-btn{
+    background:#10b981;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+/* APPLY PAGE */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.apply-container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.apply-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 45px;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.apply-btn {
+    background: #ff2d2d;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+}
+
+.apply-btn:hover {
+    background: #e60000;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .apply-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .apply-container h1 {
+        font-size: 32px;
+    }
+}
