@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIREHUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">HIREHUB</div>
+        <div id="profile">
+            Welcome,
+            <span id="userName"></span>
+        </div>
+        <button onclick="logoutUser()">
+            Logout
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="apply.html">Apply Job</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <h1>Find Your Dream Job Here</h1>
+
+        <p>Discover thousands of opportunities</p>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Job Title">
+
+            <input type="text" placeholder="Company Name">
+
+            <button>Search Jobs</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="categories">
+
+    <h2>Popular Categories</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Development</h3>
+            <p>1200+ Jobs</p>
+        </div>
+
+        <div class="card">
+            <h3>Design</h3>
+            <p>850+ Jobs</p>
+        </div>
+
+        <div class="card">
+            <h3>Marketing</h3>
+            <p>950+ Jobs</p>
+        </div>
+
+        <div class="card">
+            <h3>Healthcare</h3>
+            <p>750+ Jobs</p>
+        </div>
+
+    </div>
+
+</section>
+<script>
+    function loginUser(){
+
+        alert("Login Successful!");
+
+        window.location.href="index.html";
+
+        return false;
+    }
+</script>
+<script>
+
+    let user =
+        localStorage.getItem("username");
+
+    if(user){
+        document.getElementById("userName")
+            .innerHTML = user;
+    }
+
+    function logoutUser(){
+
+        localStorage.removeItem("username");
+
+        window.location.href =
+            "login.html";
+    }
+
+</script>
+</body>
+</html>
