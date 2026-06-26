@@ -1,61 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - HIREHUB</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | HIREHUB</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
-<body>
+<body class="login-page">
 
 <div class="login-container">
 
-    <h1>Welcome Back</h1>
-    <p>Login to continue</p>
+<div class="login-image">
 
-        <form onsubmit="return loginUser()">
-    <input type="text"
-               placeholder="Username or Email"
-               required>
+<img src="images/login.png" alt="Login">
 
-        <input type="password"
-               placeholder="Password"
-               required>
+</div>
 
-        <button type="submit" class="login-btn2">
-            Login
-        </button>
+<div class="login-box">
 
-    </form>
+<h1>HIREHUB</h1>
 
-    <div class="or">
-        OR
-    </div>
+<h3>Welcome Back</h3>
 
-    <button class="google-btn">
-        Continue with Google
-    </button>
+<p>Login to continue your career journey.</p>
 
-    <button class="google-btn">
-        Continue with Chrome
-    </button>
-    <script>
+<form action="index.html">
 
-        function loginUser() {
+<div class="input-box">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="Username" required>
+</div>
 
-            let username =
-                document.querySelector("input[type='text']").value;
+<div class="input-box">
+<i class="fa fa-envelope"></i>
+<input type="email" placeholder="Email Address" required>
+</div>
 
-            localStorage.setItem("username", username);
+<div class="input-box">
+<i class="fa fa-lock"></i>
+<input type="password" placeholder="Password" required>
+</div>
 
-            alert("Login Successful!");
+<button class="login-button">
 
-            window.location.href = "index.html";
+Login
 
-            return false;
-        }
+</button>
 
-    </script>
+</form>
+
+<div class="or">
+
+OR
+
+</div>
+
+<button class="google-btn">
+
+<i class="fab fa-google"></i>
+
+Continue with Google
+
+</button>
+
+<p class="register-link">
+
+Don't have an account?
+
+<a href="signup.html">Register</a>
+
+</p>
+
+</div>
+
 </div>
 
 </body>
+
 </html>

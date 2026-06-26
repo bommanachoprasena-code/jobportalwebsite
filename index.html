@@ -1,130 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIREHUB</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIREHUB | Find Your Dream Job</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <header>
-    <nav class="navbar">
 
-        <div class="logo">
-            HIRE<span>HUB</span>
-        </div>
+<nav class="navbar">
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="apply.html">Apply Job</a></li>
-            <li><a href="register.html">Register</a></li>
-        </ul>
+<div class="logo">
+<i class="fa-solid fa-briefcase"></i>
+<span>HIREHUB</span>
+</div>
 
-        <div class="auth-buttons">
+<ul class="nav-links">
 
-            <div id="profile">
-                Welcome,
-                <span id="userName"></span>
-            </div>
+<li><a href="#">Home</a></li>
 
-            <button class="logout-btn" onclick="logoutUser()">
-                Logout
-            </button>
+<li><a href="apply.html">Apply Jobs</a></li>
 
-            <a href="login.html" class="login">
-                Login
-            </a>
+<a href="companies.html">Companies</a>
 
-            <a href="register.html" class="signup">
-                Sign Up
-            </a>
+<li><a href="#">Categories</a></li>
 
-        </div>
+<li><a href="#about">About Us</a></li>
 
-    </nav>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="login.html" class="login-btn">Login</a>
+
+<a href="register.html" class="signup-btn">Sign Up</a>
+
+</div>
+
+</nav>
+
 </header>
+
+<!-- HERO SECTION -->
 
 <section class="hero">
 
-    <div class="overlay">
+<div class="hero-text">
 
-        <h1>Find Your Dream Job Here</h1>
+<h4>WE HELP YOU TO</h4>
 
-        <p>Discover thousands of opportunities</p>
+<h1>Find Your <span>Dream Job</span> Here</h1>
 
-        <div class="search-box">
+<p>
 
-            <input type="text" placeholder="Job Title">
+Discover thousands of jobs from top companies and
+build your successful career with HIREHUB.
 
-            <input type="text" placeholder="Company Name">
+</p>
 
-            <button>Search Jobs</button>
+<div class="hero-buttons">
 
-        </div>
+<button class="find-job">
 
-    </div>
+<i class="fa-solid fa-briefcase"></i>
+
+Find Job
+
+</button>
+
+<button class="find-company">
+
+<i class="fa-solid fa-building"></i>
+
+Find Company
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900"
+alt="Job">
+
+</div>
 
 </section>
+
+<!-- SEARCH -->
+
+<section class="search-box">
+
+<input type="text"
+placeholder="Job title, keywords...">
+
+<input type="text"
+placeholder="Location">
+
+<select>
+
+<option>All Categories</option>
+
+<option>Development</option>
+
+<option>Marketing</option>
+
+<option>Finance</option>
+
+<option>Healthcare</option>
+
+<option>Education</option>
+
+</select>
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search Jobs
+
+</button>
+
+</section>
+
+<!-- POPULAR CATEGORIES -->
 
 <section class="categories">
 
-    <h2>Popular Categories</h2>
+<h2>Popular Categories</h2>
 
-    <div class="cards">
+<div class="category-container">
 
-        <div class="card">
-            <h3>Development</h3>
-            <p>1200+ Jobs</p>
-        </div>
+<div class="card">
 
-        <div class="card">
-            <h3>Design</h3>
-            <p>850+ Jobs</p>
-        </div>
+<i class="fa-solid fa-code"></i>
 
-        <div class="card">
-            <h3>Marketing</h3>
-            <p>950+ Jobs</p>
-        </div>
+<h3>Development</h3>
 
-        <div class="card">
-            <h3>Healthcare</h3>
-            <p>750+ Jobs</p>
-        </div>
+<p>4250 Jobs</p>
 
-    </div>
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>UI/UX</h3>
+
+<p>1650 Jobs</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-bullhorn"></i>
+
+<h3>Marketing</h3>
+
+<p>1300 Jobs</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h3>Healthcare</h3>
+
+<p>980 Jobs</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-money-bill"></i>
+
+<h3>Finance</h3>
+
+<p>1120 Jobs</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Education</h3>
+
+<p>740 Jobs</p>
+
+</div>
+
+</div>
 
 </section>
-<script>
-    function loginUser(){
 
-        alert("Login Successful!");
+<!-- FEATURED JOBS -->
 
-        window.location.href="index.html";
+<section class="jobs">
 
-        return false;
-    }
-</script>
-<script>
+<h2>Featured Jobs</h2>
 
-    let user =
-        localStorage.getItem("username");
+<div class="job-container">
 
-    if(user){
-        document.getElementById("userName")
-            .innerHTML = user;
-    }
+<div class="job-card">
 
-    function logoutUser(){
+<h3>Frontend Developer</h3>
 
-        localStorage.removeItem("username");
+<p>Google</p>
 
-        window.location.href =
-            "login.html";
-    }
+<p>Hyderabad</p>
 
-</script>
+<span>₹8 LPA</span>
+
+<button>Apply Now</button>
+
+</div>
+
+<div class="job-card">
+
+<h3>Java Developer</h3>
+
+<p>Microsoft</p>
+
+<p>Bangalore</p>
+
+<span>₹12 LPA</span>
+
+<button>Apply Now</button>
+
+</div>
+
+<div class="job-card">
+
+<h3>Backend Developer</h3>
+
+<p>Amazon</p>
+
+<p>Chennai</p>
+
+<span>₹10 LPA</span>
+
+<button>Apply Now</button>
+
+</div>
+
+<div class="job-card">
+
+<h3>Python Developer</h3>
+
+<p>Infosys</p>
+
+<p>Pune</p>
+
+<span>₹7 LPA</span>
+
+<button>Apply Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<h2>About HIREHUB</h2>
+
+<p>
+
+HIREHUB is a modern online job portal connecting job seekers with leading
+companies. Search thousands of jobs, upload resumes, and build your career.
+
+</p>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div>
+
+<h2>25,000+</h2>
+
+<p>Active Jobs</p>
+
+</div>
+
+<div>
+
+<h2>8,500+</h2>
+
+<p>Companies</p>
+
+</div>
+
+<div>
+
+<h2>15,000+</h2>
+
+<p>Candidates</p>
+
+</div>
+
+<div>
+
+<h2>12+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email : hirehub@gmail.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>Location : Hyderabad, Telangana</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>HIREHUB</h2>
+
+<p>Find Your Dream Job Here</p>
+
+<p>© 2026 HIREHUB. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
