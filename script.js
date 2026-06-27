@@ -88,3 +88,96 @@ function searchJob() {
 
     });
 }
+function login(){
+
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+
+    if(email==="" || password===""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    alert("Login Successful!");
+
+    window.location.href="index.html";
+
+}
+function logout(){
+
+    alert("Logged Out Successfully!");
+
+    window.location.href="login.html";
+
+}
+function registerUser(){
+
+let name=document.getElementById("name").value;
+
+let email=document.getElementById("email").value;
+
+let password=document.getElementById("password").value;
+
+let confirm=document.getElementById("confirmPassword").value;
+
+let phone=document.getElementById("phone").value;
+
+let role=document.getElementById("role").value;
+
+if(name==""||email==""||password==""||confirm==""||phone==""||role==""){
+
+alert("Please fill all fields");
+
+return;
+
+}
+
+if(password!=confirm){
+
+alert("Passwords do not match");
+
+return;
+
+}
+
+localStorage.setItem("userName",name);
+
+localStorage.setItem("userEmail",email);
+
+localStorage.setItem("userPassword",password);
+
+localStorage.setItem("userRole",role);
+
+alert("Registration Successful!\nPlease Login.");
+
+window.location.href="login.html";
+
+}
+
+
+
+function loginUser(){
+
+let email=document.getElementById("loginEmail").value;
+
+let password=document.getElementById("loginPassword").value;
+
+let savedEmail=localStorage.getItem("userEmail");
+
+let savedPassword=localStorage.getItem("userPassword");
+
+if(email==savedEmail && password==savedPassword){
+
+alert("Login Successful!");
+
+window.location.href="index.html";
+
+}
+
+else{
+
+alert("Invalid Email or Password");
+
+}
+
+}

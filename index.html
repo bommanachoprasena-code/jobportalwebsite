@@ -16,40 +16,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <!-- NAVBAR -->
 
-<header>
+<header class="navbar">
 
-<nav class="navbar">
+    <div class="logo">
+        <h2>HIREHUB</h2>
+    </div>
 
-<div class="logo">
-<i class="fa-solid fa-briefcase"></i>
-<span>HIREHUB</span>
-</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="apply.html">Apply Job</a></li>
+        </ul>
+    </nav>
 
-<ul class="nav-links">
-
-<li><a href="#">Home</a></li>
-
-<li><a href="apply.html">Apply Jobs</a></li>
-
-<a href="companies.html">Companies</a>
-
-<li><a href="#">Categories</a></li>
-
-<li><a href="#about">About Us</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-<div class="nav-buttons">
-
-<a href="login.html" class="login-btn">Login</a>
-
-<a href="register.html" class="signup-btn">Sign Up</a>
-
-</div>
-
-</nav>
+    <div class="user-menu">
+        <span id="username">Welcome, User</span>
+        <button onclick="logout()">Logout</button>
+    </div>
 
 </header>
 
@@ -357,6 +342,13 @@ companies. Search thousands of jobs, upload resumes, and build your career.
 </footer>
 
 <script src="script.js"></script>
+<script>
+
+document.getElementById("welcomeUser").innerHTML=
+
+"Welcome, "+localStorage.getItem("userName");
+
+</script>
 
 </body>
 </html>

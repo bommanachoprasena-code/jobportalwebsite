@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Categories | HIREHUB</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="category-body">
+
+<div class="category-container">
+
+    <div class="category-header">
+
+        <h1>Add Job Category</h1>
+
+        <a href="index.html" class="back-btn">← Back Home</a>
+
+    </div>
+
+    <form>
+
+        <div class="form-group">
+            <label>Category Title <span>*</span></label>
+            <input type="text" placeholder="Enter category title">
+            <small>Example: Software Development, Marketing, Healthcare</small>
+        </div>
+
+        <div class="form-group">
+            <label>Category Slug <span>*</span></label>
+
+            <div class="slug-box">
+                <input type="text" placeholder="software-development">
+                <button type="button">Generate</button>
+            </div>
+
+            <small>The slug will be used in the category URL.</small>
+
+        </div>
+
+        <div class="form-group">
+            <label>Display Order</label>
+            <input type="number" placeholder="1">
+            <small>Lower number means higher priority.</small>
+        </div>
+
+        <button class="save-btn">
+            Save Category
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
