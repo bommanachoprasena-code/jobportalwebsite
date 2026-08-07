@@ -2,204 +2,279 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Categories | HIREHUB</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>Categories | HIREHUB</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
 
-<header>
+    <header>
+        <nav class="navbar">
 
-<nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-briefcase"></i>
+                <h2>HIREHUB</h2>
+            </div>
 
-<div class="logo">
+            <ul class="nav-links">
 
-<i class="fa-solid fa-briefcase"></i>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-<h2>HIREHUB</h2>
+                <li>
+                    <a href="jobs.html">Jobs</a>
+                </li>
 
-</div>
+                <li>
+                    <a href="companies.html">Companies</a>
+                </li>
 
-<ul class="nav-links">
+                <li>
+                    <a href="categories.html" class="active">
+                        Categories
+                    </a>
+                </li>
 
-<li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="apply.html">Apply Job</a>
+                </li>
 
-<li><a href="jobs.html">Jobs</a></li>
+            </ul>
 
-<li><a href="companies.html">Companies</a></li>
+            <div class="nav-buttons">
 
-<li><a href="categories.html" class="active">Categories</a></li>
+                <button onclick="logout()" class="logout-btn">
+                    Logout
+                </button>
 
-<li><a href="apply.html">Apply Job</a></li>
+            </div>
 
-</ul>
+        </nav>
+    </header>
 
-<div class="nav-buttons">
 
-<a href="profile.html" class="profile-btn">
+    <!-- CATEGORIES -->
 
-Profile
+    <section class="categories-page">
 
-</a>
+        <div class="categories-header">
 
-<button onclick="logout()" class="logout-btn">
+            <h1>Explore Job Categories</h1>
 
-Logout
+            <p>
+                Find the right career opportunity based on your skills
+                and interests.
+            </p>
 
-</button>
+        </div>
 
-</div>
 
-</nav>
+        <div class="categories-grid">
 
-</header>
 
-<!-- ================= HEADER ================= -->
+            <!-- IT -->
 
-<section class="category-header">
+            <div class="category-card">
 
-<h1>Explore Job Categories</h1>
+                <div class="category-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
 
-<p>Choose a category and find the best opportunities for your career.</p>
+                <h2>Information Technology</h2>
 
-</section>
+                <p>
+                    Software development, programming and technology jobs.
+                </p>
 
-<!-- ================= CATEGORIES ================= -->
+                <span>120+ Jobs</span>
 
-<section class="categories-page">
+                <a href="jobs.html?category=IT">
+                    View Jobs
+                </a>
 
-<div class="category-grid">
+            </div>
 
-<div class="category-box">
 
-<i class="fa-solid fa-laptop-code"></i>
+            <!-- DESIGN -->
 
-<h2>Software Development</h2>
+            <div class="category-card">
 
-<p>Build web, mobile, and enterprise applications.</p>
+                <div class="category-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
 
-<span>1,250 Jobs</span>
+                <h2>Design</h2>
 
-<a href="jobs.html">Browse Jobs</a>
+                <p>
+                    UI/UX, graphic design and creative opportunities.
+                </p>
 
-</div>
+                <span>80+ Jobs</span>
 
-<div class="category-box">
+                <a href="jobs.html?category=Design">
+                    View Jobs
+                </a>
 
-<i class="fa-solid fa-brain"></i>
+            </div>
 
-<h2>Artificial Intelligence</h2>
 
-<p>AI, Machine Learning and Deep Learning roles.</p>
+            <!-- MARKETING -->
 
-<span>720 Jobs</span>
+            <div class="category-card">
 
-<a href="jobs.html">Browse Jobs</a>
+                <div class="category-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
 
-</div>
+                <h2>Marketing</h2>
 
-<div class="category-box">
+                <p>
+                    Digital marketing, advertising and brand management.
+                </p>
 
-<i class="fa-solid fa-chart-line"></i>
+                <span>65+ Jobs</span>
 
-<h2>Data Science</h2>
+                <a href="jobs.html?category=Marketing">
+                    View Jobs
+                </a>
 
-<p>Data Analyst, BI, and Analytics opportunities.</p>
+            </div>
 
-<span>860 Jobs</span>
 
-<a href="jobs.html">Browse Jobs</a>
+            <!-- FINANCE -->
 
-</div>
+            <div class="category-card">
 
-<div class="category-box">
+                <div class="category-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
 
-<i class="fa-solid fa-cloud"></i>
+                <h2>Finance</h2>
 
-<h2>Cloud Computing</h2>
+                <p>
+                    Banking, accounting and financial management jobs.
+                </p>
 
-<p>AWS, Azure, DevOps and Cloud Engineering.</p>
+                <span>70+ Jobs</span>
 
-<span>540 Jobs</span>
+                <a href="jobs.html?category=Finance">
+                    View Jobs
+                </a>
 
-<a href="jobs.html">Browse Jobs</a>
+            </div>
 
-</div>
 
-<div class="category-box">
+            <!-- HR -->
 
-<i class="fa-solid fa-shield-halved"></i>
+            <div class="category-card">
 
-<h2>Cyber Security</h2>
+                <div class="category-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
 
-<p>Security Analyst and Ethical Hacking jobs.</p>
+                <h2>Human Resources</h2>
 
-<span>430 Jobs</span>
+                <p>
+                    Recruitment, talent management and HR opportunities.
+                </p>
 
-<a href="jobs.html">Browse Jobs</a>
+                <span>45+ Jobs</span>
 
-</div>
+                <a href="jobs.html?category=HR">
+                    View Jobs
+                </a>
 
-<div class="category-box">
+            </div>
 
-<i class="fa-solid fa-mobile-screen-button"></i>
 
-<h2>Mobile Development</h2>
+            <!-- SALES -->
 
-<p>Android, iOS and Flutter Developer roles.</p>
+            <div class="category-card">
 
-<span>390 Jobs</span>
+                <div class="category-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
 
-<a href="jobs.html">Browse Jobs</a>
+                <h2>Sales</h2>
 
-</div>
+                <p>
+                    Business development, sales and customer relations.
+                </p>
 
-<div class="category-box">
+                <span>90+ Jobs</span>
 
-<i class="fa-solid fa-palette"></i>
+                <a href="jobs.html?category=Sales">
+                    View Jobs
 
-<h2>UI / UX Design</h2>
+                </a>
 
-<p>Create modern and user-friendly interfaces.</p>
+            </div>
 
-<span>300 Jobs</span>
 
-<a href="jobs.html">Browse Jobs</a>
+            <!-- ENGINEERING -->
 
-</div>
+            <div class="category-card">
 
-<div class="category-box">
+                <div class="category-icon">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
 
-<i class="fa-solid fa-bullhorn"></i>
+                <h2>Engineering</h2>
 
-<h2>Digital Marketing</h2>
+                <p>
+                    Mechanical, electrical and civil engineering jobs.
+                </p>
 
-<p>SEO, SEM and Social Media Marketing roles.</p>
+                <span>100+ Jobs</span>
 
-<span>520 Jobs</span>
+                <a href="jobs.html?category=Engineering">
+                    View Jobs
+                </a>
 
-<a href="jobs.html">Browse Jobs</a>
+            </div>
 
-</div>
 
-</div>
+            <!-- HEALTHCARE -->
 
-</section>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase.js"></script>
-<script src="script.js"></script>
+            <div class="category-card">
+
+                <div class="category-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h2>Healthcare</h2>
+
+                <p>
+                    Medical, healthcare and healthcare management careers.
+                </p>
+
+                <span>55+ Jobs</span>
+
+                <a href="jobs.html?category=Healthcare">
+                    View Jobs
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+
 </body>
-</html>
 
+</html>
