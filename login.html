@@ -1,32 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<title>Login - HIREHUB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | HIREHUB</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
-<body class="login-body">
+<body class="login-page">
 
-<div class="login-box">
+<div class="login-container">
 
-<h1>HIREHUB</h1>
+    <!-- Left Side -->
 
-<p>Login to continue</p>
+    <div class="login-left">
 
-<input type="email" id="loginEmail" placeholder="Email">
+        <div class="logo">
+            <i class="fa-solid fa-briefcase"></i>
+            <h2>HIREHUB</h2>
+        </div>
 
-<input type="password" id="loginPassword" placeholder="Password">
+        <h1>Welcome Back!</h1>
 
-<button onclick="loginUser()">Login</button>
+        <p>
 
-<p>
-Don't have an account?
-<a href="register.html">Sign Up</a>
-</p>
+            Login to continue your career journey with HIREHUB.
+
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800">
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="login-right">
+
+        <form id="loginForm">
+
+            <h2>Login</h2>
+
+            <p>Sign in to your account</p>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email Address"
+                required>
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                required>
+
+            </div>
+
+            <button
+            type="submit"
+            class="login-btn">
+
+                Login
+
+            </button>
+
+            <div class="signup-text">
+
+                Don't have an account?
+
+                <a href="register.html">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="script.js"></script>
 
 </body>

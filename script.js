@@ -1,183 +1,240 @@
-function addJob() {
-    let title = document.getElementById("jobTitle").value;
-    let company = document.getElementById("company").value;
+// =========================================
+// HIREHUB SCRIPT.JS
+// =========================================
 
-    if (title === "" || company === "") {
-        alert("Please fill all fields");
-        return;
-    }
+// ================= REGISTER =================
 
-    let li = document.createElement("li");
-    li.innerHTML =
-        title + " - " + company +
-        ' <button onclick="this.parentElement.remove()">Delete</button>';
+const registerForm = document.getElementById("registerForm");
 
-    document.getElementById("jobList").appendChild(li);
+if (registerForm) {
 
-    document.getElementById("jobTitle").value = "";
-    document.getElementById("company").value = "";
-}
-function loadJobs() {
+    registerForm.addEventListener("submit", async (e) => {
 
-    let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+        e.preventDefault();
 
-    let list = document.getElementById("jobList");
+        const fullname = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("regEmail").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const password = document.getElementById("regPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
 
-    list.innerHTML = "";
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
 
-    jobs.forEach(job => {
+        // Create user in Supabase Authentication
+        const { data, error } = await supabase.auth.signUp({
+            email: email,
+            password: password
+        });
 
-        let li = document.createElement("li");
+        if (error) {
+            alert(error.message);
+            return;
+        }
 
-        li.textContent = job.title + " - " + job.company;
+        // Save user profile
+        const { error: profileError } = await supabase
+            .from("profiles")
+            .insert([
+                {
+                    fullname: fullname,
+                    email: email,
+                    phone: phone,
+                    role: "jobseeker"
+                }
+            ]);
 
-        list.appendChild(li);
+        if (profileError) {
+            alert(profileError.message);
+            return;
+        }
+
+        alert("Registration Successful!");
+
+        window.location.href = "login.html";
 
     });
+
 }
-function searchJob() {
+// ================= LOGIN =================
 
-    let searchText = document.getElementById("searchBox").value.toLowerCase();
+const loginForm = document.getElementById("loginForm");
 
-    let jobs = document.querySelectorAll("#jobList li");
+if (loginForm) {
 
-    jobs.forEach(job => {
+    loginForm.addEventListener("submit", async (e) => {
 
-        if(job.textContent.toLowerCase().includes(searchText)) {
-            job.style.display = "block";
-        } else {
-            job.style.display = "none";
+        e.preventDefault();
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password
+        });
+
+        if (error) {
+            alert(error.message);
+            return;
         }
-        function registerUser() {
 
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
+        // Save login status
+        localStorage.setItem("loggedIn", "true");
 
-            if(name === "" || email === "") {
-                alert("Fill all fields");
-                return;
-            }
+        // Save user details
+        localStorage.setItem("username", data.user.email);
 
-            let li = document.createElement("li");
-            li.textContent = name + " - " + email;
+        alert("Login Successful!");
 
-            document.getElementById("userList").appendChild(li);
-
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-        }
-        function applyJob() {
-
-            let name = document.getElementById("applicantName").value;
-            let job = document.getElementById("jobApplied").value;
-
-            if(name === "" || job === "") {
-                alert("Fill all fields");
-                return;
-            }
-
-            let li = document.createElement("li");
-            li.textContent = name + " applied for " + job;
-
-            document.getElementById("applicationList").appendChild(li);
-
-            document.getElementById("applicantName").value = "";
-            document.getElementById("jobApplied").value = "";
-        }
-        window.onload = loadJobs;
+        window.location.href = "index.html";
 
     });
-}
-function login(){
-
-    let email=document.getElementById("email").value;
-    let password=document.getElementById("password").value;
-
-    if(email==="" || password===""){
-        alert("Please fill all fields");
-        return;
-    }
-
-    alert("Login Successful!");
-
-    window.location.href="index.html";
 
 }
-function logout(){
+// ================= LOGOUT =================
+
+async function logout() {
+
+    // Sign out from Supabase
+    await supabase.auth.signOut();
+
+    // Clear local storage
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("username");
 
     alert("Logged Out Successfully!");
 
-    window.location.href="login.html";
-
-}
-function registerUser(){
-
-let name=document.getElementById("name").value;
-
-let email=document.getElementById("email").value;
-
-let password=document.getElementById("password").value;
-
-let confirm=document.getElementById("confirmPassword").value;
-
-let phone=document.getElementById("phone").value;
-
-let role=document.getElementById("role").value;
-
-if(name==""||email==""||password==""||confirm==""||phone==""||role==""){
-
-alert("Please fill all fields");
-
-return;
+    window.location.href = "login.html";
 
 }
 
-if(password!=confirm){
+// ================= PAGE PROTECTION =================
 
-alert("Passwords do not match");
+(async () => {
 
-return;
+    const currentPage = window.location.pathname;
+
+    // Skip protection for login and register pages
+    if (
+        currentPage.includes("login.html") ||
+        currentPage.includes("register.html")
+    ) {
+        return;
+    }
+
+    // Check if user is logged in
+    const {
+        data: { session }
+    } = await supabase.auth.getSession();
+
+    if (!session) {
+        window.location.href = "login.html";
+    }
+
+})();
+// ================= PROFILE =================
+
+const profileName = document.getElementById("profileName");
+const profileEmail = document.getElementById("profileEmail");
+const profilePhone = document.getElementById("profilePhone");
+
+async function loadProfile() {
+
+    const {
+        data: { user }
+    } = await supabase.auth.getUser();
+
+    if (!user) return;
+
+    const { data, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("email", user.email)
+        .single();
+
+    if (error) {
+        console.log(error);
+        return;
+    }
+
+    if (profileName) {
+        profileName.innerHTML = data.fullname;
+    }
+
+    if (profileEmail) {
+        profileEmail.innerHTML = data.email;
+    }
+
+    if (profilePhone) {
+        profilePhone.innerHTML = data.phone;
+    }
 
 }
 
-localStorage.setItem("userName",name);
+if (profileName || profileEmail || profilePhone) {
+    loadProfile();
+}
+// ================= APPLY FORM =================
 
-localStorage.setItem("userEmail",email);
+const applyForm = document.getElementById("applyForm");
 
-localStorage.setItem("userPassword",password);
+if (applyForm) {
 
-localStorage.setItem("userRole",role);
+    applyForm.addEventListener("submit", function (e) {
 
-alert("Registration Successful!\nPlease Login.");
+        e.preventDefault();
 
-window.location.href="login.html";
+        alert("Application Submitted Successfully!");
+
+        applyForm.reset();
+
+    });
 
 }
 
+// ================= EMPLOYER =================
 
+const jobForm = document.getElementById("jobForm");
 
-function loginUser(){
+if (jobForm) {
 
-let email=document.getElementById("loginEmail").value;
+    jobForm.addEventListener("submit", function (e) {
 
-let password=document.getElementById("loginPassword").value;
+        e.preventDefault();
 
-let savedEmail=localStorage.getItem("userEmail");
+        alert("Job Posted Successfully!");
 
-let savedPassword=localStorage.getItem("userPassword");
+        jobForm.reset();
 
-if(email==savedEmail && password==savedPassword){
-
-alert("Login Successful!");
-
-window.location.href="index.html";
+    });
 
 }
 
-else{
+// ================= ADMIN =================
 
-alert("Invalid Email or Password");
+document.querySelectorAll(".verify-btn").forEach(button => {
 
-}
+    button.addEventListener("click", function () {
 
-}
+        alert("Verification Successful!");
+
+    });
+
+});
+
+document.querySelectorAll(".delete-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        if (confirm("Delete this record?")) {
+
+            alert("Deleted Successfully!");
+
+        }
+
+    });
+
+});

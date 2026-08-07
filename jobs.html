@@ -1,3 +1,240 @@
-<button onclick="window.location.href='jobs.html'">
-    View Jobs
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Jobs | HIREHUB</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h2>HIREHUB</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="jobs.html" class="active">Jobs</a></li>
+
+<li><a href="companies.html">Companies</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="apply.html">Apply Job</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="profile.html" class="profile-btn">
+
+Profile
+
+</a>
+
+<button onclick="logout()" class="logout-btn">
+
+Logout
+
 </button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= PAGE TITLE ================= -->
+
+<section class="jobs-header">
+
+<h1>Explore Jobs</h1>
+
+<p>Search thousands of opportunities from top companies.</p>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="jobs-search">
+
+<input
+type="text"
+placeholder="Search Job Title">
+
+<select>
+
+<option>Location</option>
+
+<option>Chennai</option>
+
+<option>Bangalore</option>
+
+<option>Hyderabad</option>
+
+<option>Pune</option>
+
+<option>Remote</option>
+
+</select>
+
+<select>
+
+<option>Experience</option>
+
+<option>Fresher</option>
+
+<option>1+ Years</option>
+
+<option>2+ Years</option>
+
+<option>5+ Years</option>
+
+</select>
+
+<button>
+
+Search
+
+</button>
+
+</section>
+
+<!-- ================= JOB LIST ================= -->
+
+<section class="job-list">
+
+<div class="job-item">
+
+<h2>Frontend Developer</h2>
+
+<p><i class="fa-solid fa-building"></i> Google</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
+
+<p><i class="fa-solid fa-indian-rupee-sign"></i> ₹12 - ₹18 LPA</p>
+
+<span class="job-type full-time">Full Time</span>
+
+<div class="job-actions">
+
+<button class="save-job">
+
+<i class="fa-regular fa-bookmark"></i>
+
+Save
+
+</button>
+
+<a href="apply.html">
+
+Apply Now
+
+</a>
+
+</div>
+
+</div>
+
+<div class="job-item">
+
+<h2>Java Developer</h2>
+
+<p><i class="fa-solid fa-building"></i> Zoho</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Chennai</p>
+
+<p><i class="fa-solid fa-indian-rupee-sign"></i> ₹8 - ₹12 LPA</p>
+
+<span class="job-type internship">
+
+Internship
+
+</span>
+
+<div class="job-actions">
+
+<button class="save-job">
+
+<i class="fa-regular fa-bookmark"></i>
+
+Save
+
+</button>
+
+<a href="apply.html">
+
+Apply Now
+
+</a>
+
+</div>
+
+</div>
+
+<div class="job-item">
+
+<h2>Python Developer</h2>
+
+<p><i class="fa-solid fa-building"></i> Infosys</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Hyderabad</p>
+
+<p><i class="fa-solid fa-indian-rupee-sign"></i> ₹9 - ₹14 LPA</p>
+
+<span class="job-type remote">
+
+Remote
+
+</span>
+
+<div class="job-actions">
+
+<button class="save-job">
+
+<i class="fa-regular fa-bookmark"></i>
+
+Save
+
+</button>
+
+<a href="apply.html">
+
+Apply Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

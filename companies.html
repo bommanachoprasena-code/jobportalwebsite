@@ -2,76 +2,220 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Companies - HIREHUB</title>
 
-    <!-- Add this -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Companies | HIREHUB</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- Paste the company cards here -->
+<!-- ================= NAVBAR ================= -->
 
-    <section class="company-page">
+<header>
 
-        <h1>Top Hiring Companies</h1>
+<nav class="navbar">
 
-        <div class="company-grid">
+<div class="logo">
 
-            <div class="company-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png">
-                <h2>Google</h2>
-                <p>250+ Open Jobs</p>
-                <button>View Jobs</button>
-            </div>
+<i class="fa-solid fa-briefcase"></i>
 
-            <div class="company-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png">
-                <h2>Microsoft</h2>
-                <p>180+ Open Jobs</p>
-                <button>View Jobs</button>
-            </div>
+<h2>HIREHUB</h2>
 
-            <div class="company-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968870.png">
-                <h2>Amazon</h2>
-                <p>300+ Open Jobs</p>
-                <button>View Jobs</button>
-            </div>
+</div>
 
-            <div class="company-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/512px-Tata_Consultancy_Services_Logo.svg.png">
-                <h2>TCS</h2>
-                <p>220+ Open Jobs</p>
-                <button>View Jobs</button>
-            </div>
+<ul class="nav-links">
 
-            <div class="company-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg">
-                <h2>Infosys</h2>
-                <p>170+ Open Jobs</p>
-                <button>View Jobs</button>
-            </div>
+<li><a href="index.html">Home</a></li>
 
-            <div class="company-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Wipro_Primary_Logo_Color_RGB.svg">
-                <h2>Wipro</h2>
-                <p>150+ Open Jobs</p>
-                <button>View Jobs</button>
-            </div>
+<li><a href="jobs.html">Jobs</a></li>
 
-        </div>
+<li><a href="companies.html" class="active">Companies</a></li>
 
-    </section>
+<li><a href="categories.html">Categories</a></li>
 
+<li><a href="apply.html">Apply Job</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="profile.html" class="profile-btn">
+
+Profile
+
+</a>
+
+<button onclick="logout()" class="logout-btn">
+
+Logout
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= HEADER ================= -->
+
+<section class="company-header">
+
+<h1>Top Hiring Companies</h1>
+
+<p>Discover companies hiring talented professionals.</p>
+
+</section>
+
+<!-- ================= COMPANY GRID ================= -->
+
+<section class="company-page">
+
+<div class="company-grid">
+
+<div class="company-box">
+
+<i class="fa-brands fa-google"></i>
+
+<h2>Google</h2>
+
+<p>Bangalore, India</p>
+
+<p>★★★★★ (4.9)</p>
+
+<span>120 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-brands fa-microsoft"></i>
+
+<h2>Microsoft</h2>
+
+<p>Hyderabad, India</p>
+
+<p>★★★★★ (4.8)</p>
+
+<span>85 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-brands fa-amazon"></i>
+
+<h2>Amazon</h2>
+
+<p>Chennai, India</p>
+
+<p>★★★★☆ (4.6)</p>
+
+<span>150 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-solid fa-building"></i>
+
+<h2>TCS</h2>
+
+<p>Chennai, India</p>
+
+<p>★★★★☆ (4.5)</p>
+
+<span>200 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h2>Infosys</h2>
+
+<p>Mysore, India</p>
+
+<p>★★★★☆ (4.4)</p>
+
+<span>170 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-solid fa-code"></i>
+
+<h2>Zoho</h2>
+
+<p>Chennai, India</p>
+
+<p>★★★★★ (4.9)</p>
+
+<span>60 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-solid fa-computer"></i>
+
+<h2>Wipro</h2>
+
+<p>Bangalore, India</p>
+
+<p>★★★★☆ (4.3)</p>
+
+<span>90 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+<div class="company-box">
+
+<i class="fa-solid fa-network-wired"></i>
+
+<h2>Accenture</h2>
+
+<p>Pune, India</p>
+
+<p>★★★★☆ (4.6)</p>
+
+<span>140 Open Positions</span>
+
+<a href="jobs.html">View Jobs</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>

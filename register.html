@@ -1,61 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | HIREHUB</title>
 
-<meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 
-<title>Create Account</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body class="login-body">
+<body class="login-page">
 
-<div class="login-box">
+<div class="login-container">
 
-<h2>Create Your HIREHUB Account</h2>
+    <!-- LEFT SIDE -->
 
-<input type="text" id="name" placeholder="Full Name">
+    <div class="login-left">
 
-<input type="email" id="email" placeholder="Email">
+        <div class="logo">
 
-<input type="password" id="password" placeholder="Password">
+            <i class="fa-solid fa-briefcase"></i>
 
-<input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <h2>HIREHUB</h2>
 
-<input type="text" id="phone" placeholder="Phone Number">
+        </div>
 
-<select id="role">
+        <h1>Create Your Account</h1>
 
-<option value="">Select Role</option>
+        <p>
 
-<option>Job Seeker</option>
+            Join thousands of job seekers and employers.
 
-<option>Recruiter</option>
+            Find your dream job with HIREHUB.
 
-</select>
+        </p>
 
-<button onclick="registerUser()">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800">
 
-Create Account
+    </div>
 
-</button>
+    <!-- RIGHT SIDE -->
 
-<p>
+    <div class="login-right">
 
-Already have an account?
+        <form id="registerForm">
 
-<a href="login.html">
+            <h2>Register</h2>
 
-Login
+            <p>Create your account</p>
 
-</a>
+            <!-- Full Name -->
 
-</p>
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                required>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                id="regEmail"
+                placeholder="Email Address"
+                required>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+                required>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="regPassword"
+                placeholder="Password"
+                required>
+
+            </div>
+
+            <!-- Confirm Password -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required>
+
+            </div>
+
+            <!-- Checkbox -->
+
+            <div style="margin-bottom:20px;">
+
+                <input
+                type="checkbox"
+                required>
+
+                I agree to the Terms & Conditions
+
+            </div>
+
+            <button
+            type="submit"
+            class="login-btn">
+
+                Register
+
+            </button>
+
+            <div class="signup-text">
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="script.js"></script>
 
 </body>

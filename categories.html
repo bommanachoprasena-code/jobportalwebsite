@@ -2,57 +2,204 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Job Categories | HIREHUB</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Categories | HIREHUB</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
-<body class="category-body">
+<body>
 
-<div class="category-container">
+<!-- ================= NAVBAR ================= -->
 
-    <div class="category-header">
+<header>
 
-        <h1>Add Job Category</h1>
+<nav class="navbar">
 
-        <a href="index.html" class="back-btn">← Back Home</a>
+<div class="logo">
 
-    </div>
+<i class="fa-solid fa-briefcase"></i>
 
-    <form>
-
-        <div class="form-group">
-            <label>Category Title <span>*</span></label>
-            <input type="text" placeholder="Enter category title">
-            <small>Example: Software Development, Marketing, Healthcare</small>
-        </div>
-
-        <div class="form-group">
-            <label>Category Slug <span>*</span></label>
-
-            <div class="slug-box">
-                <input type="text" placeholder="software-development">
-                <button type="button">Generate</button>
-            </div>
-
-            <small>The slug will be used in the category URL.</small>
-
-        </div>
-
-        <div class="form-group">
-            <label>Display Order</label>
-            <input type="number" placeholder="1">
-            <small>Lower number means higher priority.</small>
-        </div>
-
-        <button class="save-btn">
-            Save Category
-        </button>
-
-    </form>
+<h2>HIREHUB</h2>
 
 </div>
 
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="jobs.html">Jobs</a></li>
+
+<li><a href="companies.html">Companies</a></li>
+
+<li><a href="categories.html" class="active">Categories</a></li>
+
+<li><a href="apply.html">Apply Job</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="profile.html" class="profile-btn">
+
+Profile
+
+</a>
+
+<button onclick="logout()" class="logout-btn">
+
+Logout
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= HEADER ================= -->
+
+<section class="category-header">
+
+<h1>Explore Job Categories</h1>
+
+<p>Choose a category and find the best opportunities for your career.</p>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories-page">
+
+<div class="category-grid">
+
+<div class="category-box">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h2>Software Development</h2>
+
+<p>Build web, mobile, and enterprise applications.</p>
+
+<span>1,250 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-brain"></i>
+
+<h2>Artificial Intelligence</h2>
+
+<p>AI, Machine Learning and Deep Learning roles.</p>
+
+<span>720 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>Data Science</h2>
+
+<p>Data Analyst, BI, and Analytics opportunities.</p>
+
+<span>860 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h2>Cloud Computing</h2>
+
+<p>AWS, Azure, DevOps and Cloud Engineering.</p>
+
+<span>540 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h2>Cyber Security</h2>
+
+<p>Security Analyst and Ethical Hacking jobs.</p>
+
+<span>430 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h2>Mobile Development</h2>
+
+<p>Android, iOS and Flutter Developer roles.</p>
+
+<span>390 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-palette"></i>
+
+<h2>UI / UX Design</h2>
+
+<p>Create modern and user-friendly interfaces.</p>
+
+<span>300 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+<div class="category-box">
+
+<i class="fa-solid fa-bullhorn"></i>
+
+<h2>Digital Marketing</h2>
+
+<p>SEO, SEM and Social Media Marketing roles.</p>
+
+<span>520 Jobs</span>
+
+<a href="jobs.html">Browse Jobs</a>
+
+</div>
+
+</div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+

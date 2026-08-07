@@ -1,86 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply Job - HIREHUB</title>
+    <title>Apply Job | HIREHUB</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<div class="apply-container">
+<!-- NAVBAR -->
 
-    <h1>Job Application</h1>
+<header>
 
-    <form>
+<nav class="navbar">
 
-        <div class="row">
-            <div class="input-box">
-                <label>First Name</label>
-                <input type="text" placeholder="Enter your first name">
-            </div>
+<div class="logo">
 
-            <div class="input-box">
-                <label>Last Name</label>
-                <input type="text" placeholder="Enter your last name">
-            </div>
-        </div>
+<i class="fa-solid fa-briefcase"></i>
 
-        <div class="row">
-            <div class="input-box">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="Enter phone number">
-            </div>
-
-            <div class="input-box">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email">
-            </div>
-        </div>
-
-        <div class="input-box full-width">
-            <label>Permanent Address</label>
-            <textarea rows="5" placeholder="Enter your address"></textarea>
-        </div>
-
-        <div class="row">
-            <div class="input-box">
-                <label>City</label>
-                <input type="text" placeholder="Enter your city">
-            </div>
-
-            <div class="input-box">
-                <label>Desired Job Role</label>
-                <select>
-                    <option>Select Job Role</option>
-                    <option>Software Developer</option>
-                    <option>Web Developer</option>
-                    <option>Java Developer</option>
-                    <option>Python Developer</option>
-                    <option>UI/UX Designer</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="input-box">
-                <label>Date Available</label>
-                <input type="date">
-            </div>
-
-            <div class="input-box">
-                <label>Upload Resume</label>
-                <input type="file">
-            </div>
-        </div>
-
-        <button type="submit" class="apply-btn">
-            Apply Now
-        </button>
-
-    </form>
+<h2>HIREHUB</h2>
 
 </div>
 
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="jobs.html">Jobs</a></li>
+
+<li><a href="companies.html">Companies</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="apply.html" class="active">Apply Job</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="profile.html" class="profile-btn">Profile</a>
+
+<button onclick="logout()" class="logout-btn">Logout</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- PAGE TITLE -->
+
+<section class="apply-header">
+
+<h1>Job Application</h1>
+
+<p>Complete the form below to apply for your dream job.</p>
+
+</section>
+
+<!-- APPLICATION FORM -->
+
+<section class="apply-section">
+
+<form id="applyForm" class="apply-form">
+
+<h2>Application Details</h2>
+
+<div class="form-grid">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="text" placeholder="Current Location">
+
+<input type="text" placeholder="Qualification">
+
+<input type="number" placeholder="Experience (Years)">
+
+<input type="text" placeholder="Expected Salary">
+
+<input type="url" placeholder="LinkedIn Profile">
+
+<input type="url" placeholder="GitHub / Portfolio">
+
+<select required>
+
+<option value="">Select Job Position</option>
+
+<option>Frontend Developer</option>
+
+<option>Backend Developer</option>
+
+<option>Full Stack Developer</option>
+
+<option>Python Developer</option>
+
+<option>Java Developer</option>
+
+<option>AI Engineer</option>
+
+<option>Data Analyst</option>
+
+</select>
+
+<input type="file">
+
+<textarea
+rows="6"
+placeholder="Cover Letter"></textarea>
+
+</div>
+
+<button type="submit" class="submit-btn">
+
+Apply Now
+
+</button>
+
+</form>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

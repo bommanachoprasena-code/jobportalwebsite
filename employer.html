@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Employer Dashboard | HIREHUB</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h2>HIREHUB Employer</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="jobs.html">Jobs</a></li>
+
+<li><a href="companies.html">Companies</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="profile.html" class="profile-btn">Profile</a>
+
+<button onclick="logout()" class="logout-btn">Logout</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<section class="employer-header">
+
+<h1>Employer Dashboard</h1>
+
+<p>Manage your company, jobs and applicants.</p>
+
+</section>
+
+<section class="dashboard-grid">
+
+<div class="dashboard-card">
+
+<h3>Total Jobs</h3>
+
+<h1>15</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Total Applicants</h3>
+
+<h1>248</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Interviews</h3>
+
+<h1>34</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Open Positions</h3>
+
+<h1>9</h1>
+
+</div>
+
+</section>
+
+<section class="post-job-section">
+
+<h2>Post New Job</h2>
+
+<form id="jobForm">
+
+<input type="text" placeholder="Job Title" required>
+
+<input type="text" placeholder="Company Name" required>
+
+<input type="text" placeholder="Location" required>
+
+<input type="text" placeholder="Salary">
+
+<select required>
+
+<option>Employment Type</option>
+
+<option>Full Time</option>
+
+<option>Part Time</option>
+
+<option>Internship</option>
+
+<option>Remote</option>
+
+</select>
+
+<textarea
+rows="6"
+placeholder="Job Description"></textarea>
+
+<button type="submit">
+
+Post Job
+
+</button>
+
+</form>
+
+</section>
+
+<section class="manage-jobs">
+
+<h2>Posted Jobs</h2>
+
+<table>
+
+<tr>
+
+<th>Job</th>
+
+<th>Applicants</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+<tr>
+
+<td>Frontend Developer</td>
+
+<td>55</td>
+
+<td>Open</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Delete</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Python Developer</td>
+
+<td>40</td>
+
+<td>Open</td>
+
+<td>
+
+<button>Edit</button>
+
+<button>Delete</button>
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

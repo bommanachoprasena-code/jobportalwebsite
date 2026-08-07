@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>HIREHUB | Find Your Dream Job</title>
 
 <link rel="stylesheet" href="style.css">
@@ -14,101 +19,147 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 
-<header class="navbar">
+<header>
 
-    <div class="logo">
-        <h2>HIREHUB</h2>
-    </div>
+<nav class="navbar">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="companies.html">Companies</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="apply.html">Apply Job</a></li>
-        </ul>
-    </nav>
+<div class="logo">
 
-    <div class="user-menu">
-        <span id="username">Welcome, User</span>
-        <button onclick="logout()">Logout</button>
-    </div>
+<i class="fa-solid fa-briefcase"></i>
+
+<h2>HIREHUB</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="jobs.html">Jobs</a></li>
+
+<li><a href="companies.html">Companies</a></li>
+
+<li><a href="categories.html">Categories</a></li>
+
+<li><a href="apply.html">Apply Job</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="profile.html" class="profile-btn">
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+
+</a>
+
+<button onclick="logout()" class="logout-btn">
+
+Logout
+
+</button>
+
+</div>
+
+</nav>
 
 </header>
 
-<!-- HERO SECTION -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="hero-left">
 
-<h4>WE HELP YOU TO</h4>
+<h1>
 
-<h1>Find Your <span>Dream Job</span> Here</h1>
+Find Your
+
+<span>Dream Job</span>
+
+Today
+
+</h1>
 
 <p>
 
-Discover thousands of jobs from top companies and
-build your successful career with HIREHUB.
+Explore thousands of jobs from top companies.
+
+Apply instantly and build your career with HIREHUB.
 
 </p>
 
 <div class="hero-buttons">
 
-<button class="find-job">
+<a href="jobs.html" class="explore-btn">
 
-<i class="fa-solid fa-briefcase"></i>
+Explore Jobs
 
-Find Job
+</a>
 
-</button>
+<a href="register.html" class="register-btn">
 
-<button class="find-company">
+Create Account
 
-<i class="fa-solid fa-building"></i>
-
-Find Company
-
-</button>
+</a>
 
 </div>
 
 </div>
 
-<div class="hero-image">
+<div class="hero-right">
 
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900"
-alt="Job">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900"
+alt="Job Portal">
 
 </div>
 
 </section>
+<!-- ================= SEARCH SECTION ================= -->
 
-<!-- SEARCH -->
+<section class="search-section">
 
-<section class="search-box">
+<h2>Search Your Dream Job</h2>
 
-<input type="text"
-placeholder="Job title, keywords...">
+<div class="search-box">
 
-<input type="text"
-placeholder="Location">
+<input
+type="text"
+placeholder="Job Title">
 
 <select>
 
-<option>All Categories</option>
+<option>Location</option>
 
-<option>Development</option>
+<option>Chennai</option>
 
-<option>Marketing</option>
+<option>Bangalore</option>
 
-<option>Finance</option>
+<option>Hyderabad</option>
 
-<option>Healthcare</option>
+<option>Pune</option>
 
-<option>Education</option>
+<option>Remote</option>
+
+</select>
+
+<select>
+
+<option>Category</option>
+
+<option>Software Developer</option>
+
+<option>AI Engineer</option>
+
+<option>Data Analyst</option>
+
+<option>UI/UX Designer</option>
+
+<option>Cloud Engineer</option>
 
 </select>
 
@@ -116,239 +167,532 @@ placeholder="Location">
 
 <i class="fa-solid fa-magnifying-glass"></i>
 
-Search Jobs
+Search
 
 </button>
 
-</section>
-
-<!-- POPULAR CATEGORIES -->
-
-<section class="categories">
-
-<h2>Popular Categories</h2>
-
-<div class="category-container">
-
-<div class="card">
-
-<i class="fa-solid fa-code"></i>
-
-<h3>Development</h3>
-
-<p>4250 Jobs</p>
-
 </div>
 
-<div class="card">
+<div class="popular-search">
 
-<i class="fa-solid fa-palette"></i>
+<strong>Popular Searches :</strong>
 
-<h3>UI/UX</h3>
+<span>Java</span>
 
-<p>1650 Jobs</p>
+<span>Python</span>
 
-</div>
+<span>React</span>
 
-<div class="card">
+<span>JavaScript</span>
 
-<i class="fa-solid fa-bullhorn"></i>
+<span>Machine Learning</span>
 
-<h3>Marketing</h3>
-
-<p>1300 Jobs</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-heart-pulse"></i>
-
-<h3>Healthcare</h3>
-
-<p>980 Jobs</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-money-bill"></i>
-
-<h3>Finance</h3>
-
-<p>1120 Jobs</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-<h3>Education</h3>
-
-<p>740 Jobs</p>
-
-</div>
+<span>Cloud</span>
 
 </div>
 
 </section>
 
-<!-- FEATURED JOBS -->
-
-<section class="jobs">
-
-<h2>Featured Jobs</h2>
-
-<div class="job-container">
-
-<div class="job-card">
-
-<h3>Frontend Developer</h3>
-
-<p>Google</p>
-
-<p>Hyderabad</p>
-
-<span>₹8 LPA</span>
-
-<button>Apply Now</button>
-
-</div>
-
-<div class="job-card">
-
-<h3>Java Developer</h3>
-
-<p>Microsoft</p>
-
-<p>Bangalore</p>
-
-<span>₹12 LPA</span>
-
-<button>Apply Now</button>
-
-</div>
-
-<div class="job-card">
-
-<h3>Backend Developer</h3>
-
-<p>Amazon</p>
-
-<p>Chennai</p>
-
-<span>₹10 LPA</span>
-
-<button>Apply Now</button>
-
-</div>
-
-<div class="job-card">
-
-<h3>Python Developer</h3>
-
-<p>Infosys</p>
-
-<p>Pune</p>
-
-<span>₹7 LPA</span>
-
-<button>Apply Now</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about">
-
-<h2>About HIREHUB</h2>
-
-<p>
-
-HIREHUB is a modern online job portal connecting job seekers with leading
-companies. Search thousands of jobs, upload resumes, and build your career.
-
-</p>
-
-</section>
-
-<!-- STATS -->
+<!-- ================= STATISTICS ================= -->
 
 <section class="stats">
 
-<div>
+<div class="stat-card">
 
-<h2>25,000+</h2>
+<h2>10K+</h2>
 
-<p>Active Jobs</p>
+<p>Jobs Available</p>
 
 </div>
 
-<div>
+<div class="stat-card">
 
-<h2>8,500+</h2>
+<h2>500+</h2>
 
 <p>Companies</p>
 
 </div>
 
-<div>
+<div class="stat-card">
 
-<h2>15,000+</h2>
+<h2>50K+</h2>
 
-<p>Candidates</p>
+<p>Job Seekers</p>
 
 </div>
 
-<div>
+<div class="stat-card">
 
-<h2>12+</h2>
+<h2>98%</h2>
 
-<p>Years Experience</p>
+<p>Success Rate</p>
 
 </div>
 
 </section>
+<!-- ================= FEATURED CATEGORIES ================= -->
 
-<!-- CONTACT -->
+<section class="categories">
 
-<section id="contact" class="contact">
+<h2>Featured Categories</h2>
 
-<h2>Contact Us</h2>
+<p>Choose your career path from our most popular categories.</p>
 
-<p>Email : hirehub@gmail.com</p>
+<div class="category-grid">
 
-<p>Phone : +91 9876543210</p>
+<div class="category-card">
 
-<p>Location : Hyderabad, Telangana</p>
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Software Development</h3>
+
+<p>1,250 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Data Science</h3>
+
+<p>860 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>Artificial Intelligence</h3>
+
+<p>710 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>Cloud Computing</h3>
+
+<p>540 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Cyber Security</h3>
+
+<p>430 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>Mobile Development</h3>
+
+<p>390 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>UI / UX Design</h3>
+
+<p>300 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-bullhorn"></i>
+
+<h3>Digital Marketing</h3>
+
+<p>520 Jobs Available</p>
+
+<a href="jobs.html">Explore Jobs</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= TOP COMPANIES ================= -->
+
+<section class="companies-section">
+
+    <h2>Top Hiring Companies</h2>
+
+    <p>Explore opportunities from the world's leading companies.</p>
+
+    <div class="companies-grid">
+
+        <div class="company-card">
+            <i class="fa-brands fa-google"></i>
+            <h3>Google</h3>
+            <p>Bangalore</p>
+            <span>120 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-brands fa-microsoft"></i>
+            <h3>Microsoft</h3>
+            <p>Hyderabad</p>
+            <span>85 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-brands fa-amazon"></i>
+            <h3>Amazon</h3>
+            <p>Chennai</p>
+            <span>150 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-solid fa-building"></i>
+            <h3>TCS</h3>
+            <p>Chennai</p>
+            <span>200 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Infosys</h3>
+            <p>Mysore</p>
+            <span>170 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Zoho</h3>
+            <p>Chennai</p>
+            <span>60 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-solid fa-computer"></i>
+            <h3>Wipro</h3>
+            <p>Bangalore</p>
+            <span>95 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+        <div class="company-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Accenture</h3>
+            <p>Pune</p>
+            <span>140 Open Jobs</span>
+            <a href="jobs.html">View Jobs</a>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FEATURED JOBS ================= -->
+
+<section class="featured-jobs">
+
+    <h2>Featured Jobs</h2>
+
+    <p>Apply to the latest opportunities from top companies.</p>
+
+    <div class="jobs-grid">
+
+        <div class="job-card">
+
+            <h3>Frontend Developer</h3>
+
+            <p><i class="fa-solid fa-building"></i> Google</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Bangalore</p>
+
+            <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹12 LPA - ₹18 LPA</p>
+
+            <span class="job-type full-time">Full Time</span>
+
+            <div class="job-buttons">
+
+                <button class="save-job">
+                    <i class="fa-regular fa-bookmark"></i>
+                    Save
+                </button>
+
+                <a href="apply.html">Apply Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="job-card">
+
+            <h3>Java Developer</h3>
+
+            <p><i class="fa-solid fa-building"></i> Zoho</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Chennai</p>
+
+            <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹8 LPA - ₹12 LPA</p>
+
+            <span class="job-type internship">Internship</span>
+
+            <div class="job-buttons">
+
+                <button class="save-job">
+                    <i class="fa-regular fa-bookmark"></i>
+                    Save
+                </button>
+
+                <a href="apply.html">Apply Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="job-card">
+
+            <h3>Python Developer</h3>
+
+            <p><i class="fa-solid fa-building"></i> Infosys</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Hyderabad</p>
+
+            <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹9 LPA - ₹14 LPA</p>
+
+            <span class="job-type remote">Remote</span>
+
+            <div class="job-buttons">
+
+                <button class="save-job">
+                    <i class="fa-regular fa-bookmark"></i>
+                    Save
+                </button>
+
+                <a href="apply.html">Apply Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="job-card">
+
+            <h3>AI Engineer</h3>
+
+            <p><i class="fa-solid fa-building"></i> Microsoft</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Pune</p>
+
+            <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹15 LPA - ₹22 LPA</p>
+
+            <span class="job-type full-time">Full Time</span>
+
+            <div class="job-buttons">
+
+                <button class="save-job">
+                    <i class="fa-regular fa-bookmark"></i>
+                    Save
+                </button>
+
+                <a href="apply.html">Apply Now</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+    <h2>What Our Users Say</h2>
+
+    <p>Thousands of job seekers trust HIREHUB.</p>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+
+            <img src="profile.png" alt="User">
+
+            <h3>Rahul Kumar</h3>
+
+            <span>Software Engineer</span>
+
+            <p>
+                "HIREHUB helped me get my dream job in just two weeks.
+                The application process was simple and quick."
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img src="profile.png" alt="User">
+
+            <h3>Priya Sharma</h3>
+
+            <span>Data Analyst</span>
+
+            <p>
+                "The website is easy to use and I found many verified jobs.
+                Highly recommended!"
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img src="profile.png" alt="User">
+
+            <h3>Arun S</h3>
+
+            <span>Java Developer</span>
+
+            <p>
+                "Excellent platform with top companies and a clean interface.
+                I received interview calls within days."
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <h2>Stay Updated</h2>
+
+    <p>Get the latest job alerts directly to your email.</p>
+
+    <div class="newsletter-box">
+
+        <input
+        type="email"
+        placeholder="Enter your email">
+
+        <button>
+
+            Subscribe
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
+<div class="footer-container">
+
+<div class="footer-box">
+
 <h2>HIREHUB</h2>
 
-<p>Find Your Dream Job Here</p>
+<p>
 
-<p>© 2026 HIREHUB. All Rights Reserved.</p>
+Find Your Dream Job Here.
+
+Connecting talented people with great companies.
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+
+<a href="jobs.html">Jobs</a>
+
+<a href="companies.html">Companies</a>
+
+<a href="categories.html">Categories</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Support</h3>
+
+<a href="#">Help Center</a>
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms & Conditions</a>
+
+<a href="#">Contact Us</a>
+
+
+</div>
+
+<div class="footer-box">
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<i class="fa-brands fa-facebook"></i>
+
+<i class="fa-brands fa-instagram"></i>
+
+<i class="fa-brands fa-linkedin"></i>
+
+<i class="fa-brands fa-x-twitter"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 HIREHUB. All Rights Reserved.
+
+</p>
 
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="script.js"></script>
-<script>
-
-document.getElementById("welcomeUser").innerHTML=
-
-"Welcome, "+localStorage.getItem("userName");
-
-</script>
-
 </body>
+
 </html>
